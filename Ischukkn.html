@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Список дел</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="test.js"></script>
 <style>
  #wrapper {
      padding: 20px;
@@ -21,15 +22,23 @@
     <h1 style="color: white">
         Список дел
     </h1>
-    <input placeholder="Введите новое дело"/>
-    <button>Сохранить</button>
+    <form id="form">
+        <input id="label" placeholder="Введите новое дело"/>
+        <button type="sumbit">Сохранить</button>
+    </form>
     <br>
+</div>
+
+<div>
+    <button onclick="filtering(filt.vse)">vse</button>
+    <button onclick="filtering(filt.neVipolneno)">neVipolneno</button>
+    <button onclick="filtering(filt.vipolneno)" >vipolneno</button>
 </div>
 
 
 <br/>
-<ol>
-    <li>
+<ol id="list">
+    <!-- <li>
         <p>
             <label>
             <input type="checkbox"/>
@@ -52,7 +61,7 @@
                 Сложить в лукошко &#10060;
             </label>
         </p>
-    </li>
+    </li> -->
 </ol>
 <br/>
 
